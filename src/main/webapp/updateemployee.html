@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<script type="text/javascript">
+function validate()
+{
+	var EmployeeId=document.getElementById("EmployeeId").value;
+	var productName=document.getElementById("EmployeetName").value;
+	var Employeeemail=document.getElementById("Employeeemail").value;
+	var password=document.getElementById("password").value;
+	var confirmpassword=document.getElementById("Confirmpassword").value;
+	var mobile=document.getElementById("mobile").value;
+	alert(password);
+	var errorproductId=document.getElementById("errorproductId");
+	var errorproductName=document.getElementById("errorproductName");
+	var errorQuantityofHands=document.getElementById("errorQuantityofHands");
+	var errorpassword=document.getElementById("errorpassword");
+	var errorconfirmpassword=document.getElementById("errorconfirmpassword");
+	var errorprice=document.getElementById("errorprice");
+	var salary=document.getElementById("salary");
+	var errorsalary = document.getElementById("errorsalary");
+	if(EmployeeId.length==0)
+		{
+		errorproductId.innerHTML="<i><u>Please enter Id"
+			return false;
+		}
+	else if(EmployeeName.length==0)
+		{
+		
+			errorproductName.innerHTML="Please enter Name"
+			return false;
+		}
+		else if(Employeeemail.length==0)
+		{
+			errorQuantityofHands.innerText="Please enter Emailid"
+			return false;
+		}
+		else if(password.length==0)
+		{
+			errorpassword.innerHTML="<i><u>Please enter password"
+			return false;
+		}
+		else if(confirmpassword.length!=password.length)
+		{
+			errorconfirmpassword.innerHTML="<i><u>Your password was not same"
+			return false;
+		}
+		else if(mobile.length==0)
+		{
+			errorprice.innerHTML="<i><u>Please enter mobile number"
+			return false;
+		}
+		
+		else{
+			alert("welcome")
+			return true;
+		}
+	}
+		
+</script>
+<style>
+
+body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-image:url("https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-business-background-employee-logo-cohesive-strength-create-brilliant-image_256581.jpg");
+   background-size: 100% 100%;
+   background-repeat :no-repeat;
+   background-attachment:fixed;
+    font-family: 'Arial';  
+}  
+.form-box{
+	width: 380px;
+	height: 480px;
+	position: center;
+	margin: 6% auto;
+	background: #fff;
+	padding: 2px;
+	overflow: hidden;
+	
+}
+/*Login Register button design*/
+.button-box{
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 20px 9px #ff61241f;
+	border-radius: 30px;
+}
+.toggle-btn{
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+}
+#btn{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: linear-gradient(to right,#ff105f,#ffad06);
+	border-radius: 30px;
+	transition: .5s;
+}
+.social-icons{
+	margin: 30px auto;
+	text-align: center;
+}
+.social-icons img{
+	width: 30px ;
+	margin: 0 12px;
+	box-shadow: 0 0 20px 0 #7f7f7f3d;
+	cursor: pointer;
+	border-radius: 50%;  /*icons round shape*/
+}
+.input-group{
+	top: 180px;
+	position: absolute;
+	width: 280px;
+	transition: .5s;
+}
+.input-field{
+	  width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}
+.submit-btn{
+	
+	padding: 5px 5px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: linear-gradient(to right, #ff105f,#ffad06);
+	border: 0;
+	outline: none;
+	border-radius: 5px;
+}
+.check-box{
+	margin: 30px 10px 30px 0;
+}
+span{
+	color: #777;
+	font-size: 12px;
+	bottom: 68px;
+	position: absolute;
+	}
+
+
+</style>
+<body margin="auto"  bgcolor="aqua" >
+
+
+
+<a href="Home.html">HOME</a>
+<h2 text-align ="center" >EMLOYEE UPDATE FORM</h2>
+  
+    <form action="UpdateEmployeeController" onsubmit="return validate()" align = "center"><table align ="center"  cellpadding = "5" cellspacing ="5">
+	
+	
+		<td>Employee Name           :<input type="text" name="EmployeeName" id="EmployeeName" placeholder = "EmployeeName"class="input-field"/></td>
+		<td><font color="red"><div id="errorproductName"></div></font></td>	
+	</tr>
+	<tr>
+	<td>Employee Email              :<input color ="black" type="email" name="Employeeemail" id="Employeeemail" placeholder = "EmployeeEmailId" class="input-field"/></td>
+		<td><font color="red"><div id="errorQuantityofHands"></div></font></td>
+		</tr>
+		
+    <tr>
+       <td>Change Password          :<input color ="black" type = "password" name = "password" id ="password" placeholder = "Password" class="input-field"/></td>
+        <td><font color ="red"><div id="errorpassword"></div></font></td>
+        </tr>
+    <tr>
+        <td>Confirm Change Password<input color ="black" type = "password" name = "Confirmassword" id ="Confirmpassword" placeholder = "ConfirmPassword" class="input-field"/></td>
+        <font color ="red"><div id="errorconfirmpassword"></div></font>
+        </tr>
+        
+	<tr>
+		<td>Mobile Number            :<input color ="black" type="number" name="mobile" id="mobile" placeholder = "Mobilenumber"class="input-field" /></td>
+		<td><font color="red"><div id="errorprice"></div></font></td>
+		</tr>
+		
+	<font color="red"><div id="errorsalary"></div></font></td>
+	<tr>
+	<td><input type="submit" value="Update Account" class ="submit-btn"/></td></tr>
+	<tr><td><input type="reset" value="Clear Details" class ="submit-btn"/></td></tr>
+	
+</table>
+</form>	
+
+
+</body>
+</html>

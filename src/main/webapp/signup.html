@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<body bgcolor="bgcolor="aqua">
+<script type="text/javascript">
+function validate()
+{
+	var Id=document.getElementById("Id").value;
+	var productName=document.getElementById("Name").value;
+	var mobile=document.getElementById("mobile").value;
+	var email =document.getElementById("email").value;
+	var password =document.getElementById("password").value;
+	var confirmpassword =document.getElementById("confirmpassword").value;
+	
+	
+	var errorId=document.getElementById("errorproductId");
+	var errorName=document.getElementById("errorproductName");
+	var errormobile=document.getElementById("errorQuantityofHands");
+	var erroremail=document.getElementById("errorprice");
+	var errorpassword=document.getElementById("errorpassword");
+	var errorconfirmpassword=document.getElementById("errorconfirmpassword");
+	
+	var salary=document.getElementById("salary");
+	if(Id.length==0)
+		{
+		errorId.innerHTML="<i><u>Please enter Id"
+			return false;
+		}
+	else if(Name.length==0)
+		{
+		
+			errorName.innerHTML="Please enter Name"
+			return false;
+		}
+		else if(mobile.length==0)
+		{
+			errormobile.innerText="Please enter mobilenumber"
+			return false;
+		}
+		else if(email.length==0)
+		{
+			erroremail.innerHTML="<i><u>Please enter emailid"
+			return false;
+		}
+		else if(password.length==0)
+		{
+			errorpassword.innerHTML="<i><u>Please enter password"
+			return false;
+		}
+		else if(password.length() != confirmpassword.length()){
+			errorconfirmpassword.innerHTML="yOUR PASSWORD WAS NOT SAME"
+		     return false;
+		}
+	
+	
+		
+		
+	}
+		
+</script>
+<a href="home.html">HOME</a>
+<h2>EMPLOYEE SIGNUP FORM</h2>
+<form onsubmit="return validate()"><table align ="center" border ="1" cellpadding = "3" cellspacing ="3">
+	
+	<tr><td> *Id</td><td><input type="text" name="Id" id="Id"/></td>
+		<td><font color="red"><div id="errorId"></div></font></td>
+		</tr>
+	<tr>
+		<td> *Name</td><td><input type="text" name="Name" id="Name"/></td>
+		<td><font color="red"><div id="errorName"></div></font></td>	
+	</tr>
+	<tr><td>Email</td><td><input type ="email" name = "emailid" id ="emailid" /></td>
+<td><font color="red"><div id="erroremailid"></div></font></td></tr>
+		</tr>
+<tr><td>*Mobile</td><td><input type ="text" name = "mobile" id ="mobile" /></td>
+		<td><font color="red"><div id="errormobile"></div></font></td>
+		</tr>
+		
+	
+		<tr><td>*Password</td>
+		<td><input type ="password" name = "password" id ="password" /></td>
+		<td><font color="red"><div id="errorpassword"></div></font></td></tr>
+
+<tr><td>*ConfirmPassword</td>
+<td><input type ="password" name = "confirmpassword" id ="confirmpassword" /></td>
+
+<td><font color="red"><div id="errorconfirmpassword"></div></font></td></tr>
+
+		
+	<tr><td> Salary </td><td>
+					<select name="salary" id="salary">
+							<option>--select---</option>
+							<option>Below 5000000 </option>
+							<option>500000-800000 </option>
+							<option>800000-1200000 </option>
+							<option> None</option>
+					</select>
+	</td>
+	<font color="red"><div id="<font color="orange"><div id="errorsalary"></div></font></td></div></font></td></tr>
+	<tr><td><input type="submit" value="Add Product"/></td>
+	<td><input type="reset" value="clear"/></td></tr>
+	
+</table>
+</form>	
+</body>
+</html>

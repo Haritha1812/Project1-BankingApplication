@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link type="text/css" rel="stylesheet" href="sign.css">
+</head>
+
+<script type="text/javascript">
+function validate()
+{
+	var productId=document.getElementById("CustomerId").value;
+	var productName=document.getElementById("CustomerName").value;
+	var QuantityofHands=document.getElementById("Customeremail").value;
+	var password=document.getElementById("password").value;
+	var confirmpassword=document.getElementById("Confirmpassword").value;
+	var price=document.getElementById("mobile").value;
+	alert(password);
+	var errorproductId=document.getElementById("errorproductId");
+	var errorproductName=document.getElementById("errorproductName");
+	var errorQuantityofHands=document.getElementById("errorQuantityofHands");
+	var errorpassword=document.getElementById("errorpassword");
+	var errorconfirmpassword=document.getElementById("errorconfirmpassword");
+	var errorprice=document.getElementById("errorprice");
+	var salary=document.getElementById("accounts");
+	var errorsalary = document.getElementById("errorsalary");
+	if(productId.length==0)
+		{
+		errorproductId.innerHTML="<i><u>Please enter Id"
+			return false;
+		}
+	else if(productName.length==0)
+		{
+		
+			errorproductName.innerHTML="Please enter Name"
+			return false;
+		}
+		else if(QuantityofHands.length==0)
+		{
+			errorQuantityofHands.innerText="Please enter Emailid"
+			return false;
+		}
+		else if(password.length==0)
+		{
+			errorpassword.innerHTML="<i><u>Please enter password"
+			return false;
+		}
+		else if(confirmpassword.length!=password.length)
+		{
+			errorconfirmpassword.innerHTML="<i><u>Your password was not same"
+			return false;
+		}
+		else if(price.length==0)
+		{
+			errorprice.innerHTML="<i><u>Please enter mobile number"
+			return false;
+		}
+		else if(salary.value == "--select---"){
+			errorsalary.innerHTML="<i><u>Please select any account type"
+			
+		}
+		
+		else{
+			
+			return true;
+		}
+	}
+		
+</script>
+<style>
+
+body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-image:url("https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFua2luZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60.jpg");
+   background-size: 100% 100%;
+   background-repeat :no-repeat;
+   background-attachment:fixed;
+    font-family: 'Arial';  
+}  
+
+
+
+</style>
+
+<a href="Home.html">HOME</a>
+<h2 text-align ="center" >CUSTOMER UPDATE  FORM</h2>
+  
+    <form action="UpdateCustomerControler" onsubmit="return validate()" method = "get"><table align ="center"  cellpadding = "5" cellspacing ="5">
+	
+	
+		<td>Customer Name          :<input type="text" name="CustomerName" id="CustomerName" placeholder = "CustomerName"class="input-field"/></td>
+		<td><font color="red"><div id="errorproductName"></div></font></td>	
+	</tr>
+	<tr>
+	<td>Customer Email            :<input color ="black" type="email" name="Customeremail" id="Customeremail" placeholder = "CustomerEmailId" class="input-field"/></td>
+		<td><font color="red"><div id="errorQuantityofHands"></div></font></td>
+		</tr>
+		
+    <tr> 
+       <td>Change Password        :<input color ="black" type = "password" name = "password" id ="password" placeholder = "Password" class="input-field"/></td>
+        <td><font color ="red"><div id="errorpassword"></div></font></td>
+        </tr>
+    <tr>
+        <td>Confirm change password :<input color ="black" type = "password" name = "Confirmassword" id ="Confirmpassword" placeholder = "ConfirmPassword" class="input-field"/></td>
+        <font color ="red"><div id="errorconfirmpassword"></div></font>
+        </tr>
+        
+	<tr>
+		<td>Mobile number         :<input color ="black" type="number" name="mobile" id="mobile" placeholder = "Mobilenumber"class="input-field" /></td>
+		<td><font color="red"><div id="errorprice"></div></font></td>
+		</tr>
+	
+	<td><input type="submit" value="Update account" class ="submit-btn"/></td></tr>
+	
+	
+</table>
+</form>	
+</body>
+</html>
